@@ -1,0 +1,63 @@
+<html>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Form</legend>
+                <div>
+                    <label>
+                        <span>IRI</span>
+                        <input id="iri" name="iri" type="url">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Inline labels</span>
+                        <input id="inlineLabels" checked name="inlineLabels" type="checkbox">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Inline types</span>
+                        <input id="inlineTypes" checked name="inlineTypes" type="checkbox">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Inline graphs</span>
+                        <input id="inlineGraphs" checked name="inlineGraphs" type="checkbox">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Hide <code>rdf:rest rdf:nil</code></span>
+                        <input id="hideRestNil" checked name="hideRestNil" type="checkbox">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Orientation</span>
+                        <select id="orientation" name="orientation">
+                            <option value="LR">Left to right</option>
+                            <option value="TB">Top to bottom</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Resolve namespaces</span>
+                        <input id="resolveNamespaces" checked name="resolveNamespaces" type="checkbox">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Resolve prefix.cc namespaces</span>
+                        <input id="resolvePrefixCcNamespaces" checked name="resolvePrefixCcNamespaces" type="checkbox">
+                    </label>
+                </div>
+                <button>Submit</button>
+            </fieldset>
+        </form>
+        <a id="diagram"></a>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>

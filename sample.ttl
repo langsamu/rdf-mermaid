@@ -1,0 +1,77 @@
+PREFIX : <http://example.com/>
+PREFIX this: <http://example.com/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+_:g {
+    <s> <p> <o> .
+}
+
+_:g rdfs:label "label1", "label2" .
+
+
+#[
+#    rdfs:label "special" ;
+#    : "'", '"', "~", "/", "\\", "ő", "https://fragments.dbpedia.org/2016-04/en{?subject,predicate,object}", "Triple Pattern Fragment of the 'DBpedia 2016-04' dataset containing triples matching the pattern { ?s <http://dbpedia.org/ontology/starring> ?o }."
+#] .
+#
+#[
+#    rdfs:label "props" ;
+#    :p2 :o2 ;
+#] .
+#
+#:p2
+#    rdfs:label "p2<a>/</a>/\\" .
+#
+#[ : "o" ] .
+#
+#[ : [] ] .
+#
+#[
+#    rdfs:label "literals" ;
+#    :
+#        "" ,
+#        "plain" ,
+#        "typed"^^:resolvedLocally ,
+#        "typed"^^owl:resolvedExternally ,
+#        "typed"^^<http://domain/notResolved> ,
+#        "language-tagged"@en
+#    ;
+#] .
+#
+#[
+#    rdfs:label "iris" ;
+#    :
+#        :resolvedLocally ,
+#        owl:resolvedExternally ,
+#        <http://domain/notResolved> ,
+#        :labelled ,
+#        :typed
+#    ;
+#] .
+#
+#:labelled
+#    rdfs:label "labelled iri" .
+#
+#:typed
+#    a :Class1 .
+#
+#[
+#    rdfs:label "blanks" ;
+#    :
+#        [ ] ,
+#        [ rdfs:label "" ] ,
+#        [ rdfs:label "blank1" ] ,
+#        [ a :Class1 ] ,
+#        [ a :Class1, :Class2, :Class3  ; rdfs:label "multiple", "labels" ]
+#    ;
+#] .
+#
+#:Class2
+#    rdfs:label "Class2" .
+#
+#:Class3
+#    rdfs:label "" .
